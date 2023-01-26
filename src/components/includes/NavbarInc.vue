@@ -8,26 +8,31 @@
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto" > 
-                    <li class="nav-item" v-if="currentRouteName!='login'">
+                <ul class="navbar-nav ml-auto" v-if="currentRouteName!='login'"> 
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="#header-top">Inicio</a>
                     </li>
-                    <li class="nav-item" v-if="currentRouteName!='login'">
+                    <li class="nav-item" >
                         <a class="nav-link text-white" href="#about">Sobre nós</a>
                     </li>
-                    <li class="nav-item" v-if="currentRouteName!='login'">
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="#service">Serviços</a>
                     </li>
-                    <li class="nav-item" v-if="currentRouteName!='login'">
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="#foot">Contactos</a>
                     </li>
                     <li class="nav-item" >
                         <router-link to="/" class="nav-link text-white">Home</router-link>
                     </li>
-                    <li class="nav-item" v-if="currentRouteName!='login'">
+                    <!-- <li class="nav-item">
+                        <router-link to="/login" class="nav-link text-white">Login </router-link>
+                    </li> -->
+                </ul>  
+                <ul class="navbar-nav ml-auto" v-show="currentRouteName=='login'"> 
+                    <li class="nav-item">
                         <router-link to="/login" class="nav-link text-white">Login </router-link>
                     </li>
-                </ul>                       
+                </ul>                     
             </div>
         </div>
     </nav>
