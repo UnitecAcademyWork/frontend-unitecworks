@@ -11728,11 +11728,12 @@ section .section-title {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
-#footer ul.social li{
+#footer ul.social li {
 	padding: 3px 0;
 }
+
 #footer ul.social li a i {
-    margin-right: 5px;
+  margin-right: 5px;
 	font-size:25px;
 	-webkit-transition: .5s all ease;
 	-moz-transition: .5s all ease;
@@ -11772,43 +11773,37 @@ section .section-title {
 }
 .bg-black{
   background-color: #001236 !important;
-    /* IE 8 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-
-    /* IE 5-7 */
-    filter: alpha(opacity=50);
-  
-    /* Netscape */
-    -moz-opacity: 0.5 !important;
-  
-    /* Safari 1.x */
-    -khtml-opacity: 0.5 !important;
-    /* opacity: 0.78 !important; */
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  /* IE 5-7 */
+  filter: alpha(opacity=50);
+  /* Netscape */
+  -moz-opacity: 0.5 !important;
+  /* Safari 1.x */
+  -khtml-opacity: 0.5 !important;
+  /* opacity: 0.78 !important; */
 }
 
 .bg-black1{
-  background-color: #0304043b !important;
+    background-color: #0304043b !important;
     /* IE 8 */
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-
     /* IE 5-7 */
     filter: alpha(opacity=50);
-  
     /* Netscape */
     -moz-opacity: 0.5 !important;
-  
     /* Safari 1.x */
     -khtml-opacity: 0.5 !important;
     opacity: 0.6 !important;
 }
 
 @media (max-width:767px){
-	#footer h5 {
+  #footer h5 {
     padding-left: 0;
     border-left: transparent;
     padding-bottom: 0px;
     margin-bottom: 10px;
-}
+  }
 }
 
 body {
@@ -11822,74 +11817,70 @@ body {
   margin-bottom: 40px;
 }
 footer {
-      color: #fff;
-      /* font-size: 1.2rem; */
-      /* display: flex; */
-      justify-content: space-between;
-      /* flex-wrap: wrap; */
-      /* padding: 2rem 4rem; */
-      /* position: relative; */
-      /* top: 2rem; */
+  color: #fff;
+  /* font-size: 1.2rem; */
+  /* display: flex; */
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  /* padding: 2rem 4rem; */
+  /* position: relative; */
+  /* top: 2rem; */
 }
 footer p, a {
-font-size: 12px;
-/* font-family: 'Roboto', sans-serif; */
+  font-size: 12px;
+  /* font-family: 'Roboto', sans-serif; */
 }
 footer h6 {
-/* font-family: 'Playfair Display', serif; */
-margin-bottom: 40px;
-position: relative;
+  /* font-family: 'Playfair Display', serif; */
+  margin-bottom: 40px;
+  position: relative;
 }
 footer h6:after {
-position: absolute;
-content: "";
-background: grey;
-width: 12%;
-height: 1px;
-left: 0;
-bottom: -20px;
+  position: absolute;
+  content: "";
+  background: grey;
+  width: 12%;
+  height: 1px;
+  left: 0;
+  bottom: -20px;
 }
 .btn-footer {
-           color: grey;
-        
-          text-decoration: none;
-          border: 1px solid;
-          border-radius: 43px;
-          font-size: 13px;
-          padding: 7px 30px;
-          line-height: 47px;
+  color: grey;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 43px;
+  font-size: 13px;
+  padding: 7px 30px;
+  line-height: 47px;
 }
 .btn-footer:hover {
-          
-          text-decoration: none;
-         
+  text-decoration: none;
 }
 .form-footer input[type="text"] {
   border: none;
-border-radius: 16px 0 0 16px;
-outline: none;
-padding-left: 10px;
-
+  border-radius: 16px 0 0 16px;
+  outline: none;
+  padding-left: 10px;
 }
 ::placeholder {
-font-size: 10px;
-padding-left: 10px;
-font-style: italic;
+  font-size: 16px;
+  padding-left: 16px;
+  /* font-style: italic; */
 }
 .form-footer input[type="button"] {
-border: none;
-background:#232323;
+  border: none;
+  background:#232323;
   margin-left: -5px;
-color: #fff;
-outline: none;
-border-radius: 0 16px 16px 0;
-padding: 2px 12px;
+  color: #fff;
+  outline: none;
+  border-radius: 0 16px 16px 0;
+  padding: 2px 12px;
 }
 .social .fa {
-/* color: grey; */
-font-size: 22px;
-padding: 10px 15px;
-background: #3c3c3c;
+  /* color: grey; */
+  font-size: 22px;
+  padding: 10px 15px;
+  background: #3c3c3c;
 }
 footer ul li {
 list-style: none;
