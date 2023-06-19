@@ -1,50 +1,63 @@
 <template>
-    <form action="">
-      <div class="conteudos p-5">
-        <div class="text-center p-5">
-            <h1>Registo</h1>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-4"> 
-              <div class="form-group ml-4">
-                  <h6 class="title-small">Email :</h6>
-                  <input type="password" class="form-control" id=""  placeholder="Insira o seu o Endereco de e-mail">
-              </div>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-4"> 
-        <div class="form-group ml-4">
-          <h6>Senha :</h6>
-          <input type="password" class="form-control" id=""  placeholder="Insira a sua senha">
+  <NavbarInc/>
+    <RegCandidato v-if="currentRouteName=='regCandidato'"/>
+    <RegEmpresa v-if="currentRouteName=='regEmpresa'"/>
+    <RegEmpresa v-if="currentRouteName=='regIensino'"/>
+  <footer-inc></footer-inc>
+</template>
     
-          <div class="row col-md-12">
-    
-          <div class="checkbox mr-auto py-2 text-muted">
-              <label><input type="checkbox">Remember me</label>
-          </div>
-          <div class="forgot p-2">
-              <a href="#">Forgot password?</a>
-          </div>
-          </div>
-    
-          <div class="button">
-              <button type="submit" class="btn btn-primary text-right">Entrar</button>
-          </div>
-        </div>
-        </div>
-        </div>
-      </div>
-    </form>
-    </template>
-    
-    <script>
+<script>
+  import NavbarInc from '@/components/includes/NavbarInc.vue'
+  import FooterInc from '@/components/includes/FooterInc.vue'
+  import RegCandidato from './RegCandidato.vue'
+  import RegEmpresa from './RegEmpresa.vue'
+  import axios from 'axios'
+  // import router from '@/router'
     export default {
       name: 'RegistoView',
+      components:{
+        NavbarInc,
+        FooterInc,
+        RegCandidato,
+        RegEmpresa,
+      },
+      data: function() { 
+        return {
+          email: "",
+          password: "",
+        }
+      },
+      mounted: function() {
+        // var vm = thi
+      },
+      methods:{
+         salvarCandidato() {
+          axios.get(`https://backend.unitec.co.mz/sanctum/csrf-cookie`).then((response)=>{
+            console.log('crsf-cookie',response);
+          })
+          let uri = `https://backend.unitec.co.mz/candidato/reg`
+          axios.post(uri, {
+            'email':this.email,
+            'password':this.password,
+          })
+          .then((response)=>{
+              console.log('login',response);
+          })
+          .catch(error=>console.log(error))
+        },
+      },
+      computed: {
+        currentRouteName() {
+            return this.$route.name;
+        }
+      }
     }
-    </script>
-    
-    <style scoped>
-    
-    </style>
-    
+</script>
+  
+  <style scoped>
+    form{
+      padding-top: 120px;
+      padding-bottom: 50px;
+    }
+  </style>
+  

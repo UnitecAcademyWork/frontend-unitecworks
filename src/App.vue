@@ -1,8 +1,5 @@
 <template>
-
   <router-view/>
-
-  <!-- <footer-inc></footer-inc> -->
 </template>
 
 <script>
@@ -15,9 +12,4 @@ export default {
     // FooterInc,
   },
 }
-
 </script>
-
-<style>
-
-</style>
